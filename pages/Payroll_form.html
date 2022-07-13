@@ -7,21 +7,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="..\css\payroll_form.css">
     <title>Employee Payroll form</title> 
+    
+    <script defer src="js\Untitled-1.js"></script>                         <!--------New Task Java Script link --------->
+    
     <script defer src="..\js\Payroll_form.js"></script>
 </head>
-<body>  
+<body>   
     <!--UC.1 Create Employee Payroll UI System-->
     <header class="header-content header">
         <div class="logo-content">
-            <img src="..\assets\logo.jpg" alt="logo" width="5%" height="5%">
-            <div>
-                <span class="emp-text">EMPLOYEE</span><br>
-                <span class="emp-text emp-payroll">PAYROLL</span>
-            </div>
+        <img src="..\assets\logo.jpg" alt="logo" width="5%" height="5%">
+        <div>
+            <span class="emp-text">EMPLOYEE</span><br>
+            <span class="emp-text emp-payroll">PAYROLL</span>
+        </div>
         </div>
     </header>
     <div class="form-content">
-        <form class="form" action="#" onsubmit="save(event);return false">    
+        <form class="form" action="#" onsubmit="save(event); return false">    
         <!-- UC2 Create Payroll form with Name & Header-->
         <div class="form-head"> Employee Payroll form</div>
         <div class="row-content">
@@ -86,7 +89,7 @@
                 
             <!----UC5 Form With Start Date----->
             <div class="row-content">
-                <label class="label text" for="StartDate">StartDate</label>
+                <label class="label text" for="StartDate">Start Date</label>
                 <div>
                     <select id="day" name="Day">
                         <option value="1">1</option>
