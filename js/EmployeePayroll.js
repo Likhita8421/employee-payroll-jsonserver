@@ -12,7 +12,7 @@ class EmployeePayrollData {
 
     get name() { return this._name; }
     set name(name) {
-        let nameRegex = Regex ('^[A-Z]{1}[a-zA\\s]{2,}$')
+        let nameRegex = RegExp('^[A-Z]{1}[a-zA\\s]{2,}$')
         if (nameRegex.test(name))
             this._name = name;
         else throw 'Name is Incorrect!';    
@@ -55,7 +55,7 @@ class EmployeePayrollData {
         const empDate = !this.startDate ? "undefined" :
                         this.startDate.toLocalDateString("en-US", options);
         return "id=" + this.id + ", name='" + this.name + ", gender='" + this.gender + ", profilePic='" + this.profilePic +", department=" + this.department +
-                ", salary=" + this.salary + this.salary + ", startDate=" + empDate +", note=" + this.notes          
+                ", salary=" + this.salary + this.salary + ", startDate=" + empDate +", note=" + this.notes;        
 
     }
 

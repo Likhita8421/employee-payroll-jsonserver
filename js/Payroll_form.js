@@ -6,27 +6,33 @@ output.textContent = salary.value;
 salary.addEventListener('input', function () {
 output.textContent = salary.value; });
 
- 
-//Name Validation
-{
+
+
+//UC-2 New Payroll Form - Add EventListeners
+
+window.addEventListener('DOMContentLoaded', (event) => {
     const name = document.querySelector('#name');
-    const message = document.querySelector('.error-output');
-    name.addEventListener('input', function()
-    {
-        let nameCheck = RegExp('^[A-Z]{1}[a-zA-Z]{2,}$');
-        if(nameCheck.test(name.value))
-        {
-            message.textContent = "";
+    const textError = document.querySelector('.text-error');
+    name.addEventListener('input', function() {
+        if(name.value.length == 0) {
+            textError.textContent = " ";
+            return;
         }
-        else if(name.value == "")
-        {
-            message.textContent = "";
+        try {
+            ( new EmployeePayrollData()).name = name.value;;
+            textError.textContent = "";
         }
-        else
-        {
-            message.textContent = "Format Incorrect";
+        catch (e) {
+            textError.textContent = e;
         }
     });
-}
-footer
+
+    const salary = document.querySelector('#salary');
+    const output = document.querySelector('.salary-output');
+    output.textContent = salary.value;
+    salary.addEventListener('input', function(){
+        output.textContent = salary.value;
+    });
+});
+
                                     

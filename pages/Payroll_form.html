@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="..\css\payroll_form.css">
     <title>Employee Payroll form</title> 
     
-    <script defer src="js\Untitled-1.js"></script>                         <!--------New Task Java Script link --------->
-    
+    <script defer src="..\js\EmployeePayroll"></script>                         <!--------New Task Java Script link --------->
     <script defer src="..\js\Payroll_form.js"></script>
+
 </head>
 <body>   
     <!--UC.1 Create Employee Payroll UI System-->
@@ -24,12 +24,13 @@
         </div>
     </header>
     <div class="form-content">
-        <form class="form" action="#" onsubmit="save(event); return false">    
+        <form class="form" action="#" onreset="resetForm()" onsubmit="save()">    
         <!-- UC2 Create Payroll form with Name & Header-->
         <div class="form-head"> Employee Payroll form</div>
         <div class="row-content">
             <label class="label-text" for="name">Name</label>
-            <input class="input" type="text" id="name" name="name" placeholder="Your name.." required>                  
+            <input class="input" type="text" id="name" name="name" placeholder="Your name.." required>  
+            <error-output class="text-error" for="text"></error-output> 
         </div>
 
         <!-- UC3 Add Profile Images -->
@@ -159,10 +160,10 @@
                 <button type="reset" class="resetButton button">Reset</button>
               </div>
             </div>
+           
         </form>
         <script src="..\js\Payroll_form.js"></script>
-
-
-    </div>
+        <script src="..\js\EmployeePayroll.js"></script>
+    </div>     
 </body>
 </html> 
