@@ -58,19 +58,4 @@ class EmployeePayrollData {
                 ", salary=" + this.salary + this.salary + ", startDate=" + empDate +", note=" + this.notes;        
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
